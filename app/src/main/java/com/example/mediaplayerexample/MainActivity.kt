@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         if (myMediaPlayer == null){
             myMediaPlayer = MediaPlayer.create(this, R.raw.song)
         }
+        // Starts or resumes playback.
         myMediaPlayer?.start()
     }
 
@@ -29,9 +30,7 @@ class MainActivity : AppCompatActivity() {
         A button for Pausing sound.
     */
     fun pauseSound(view: View) {
-        if(myMediaPlayer != null){
-            myMediaPlayer?.pause()
-        }
+        myMediaPlayer?.pause()
     }
 
     /*
@@ -39,7 +38,6 @@ class MainActivity : AppCompatActivity() {
     */
     fun stopSound(view: View) {
         //myMediaPlayer?.stop()
-
         stopSong()
     }
 
@@ -62,5 +60,6 @@ class MainActivity : AppCompatActivity() {
         super.onStop()
         stopSong()
     }
+
 
 }
